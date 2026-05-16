@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  "version": "1.0.0",
+  "id": "e5f6a7b8-c9d0-1234-efab-456789012345",
+  "packageName": "com.zucca.jira-manager",
+  "developer": {
+    "name": "Rafsan Huseynov",
+    "websiteUrl": "https://zucca.dev",
+    "privacyUrl": "https://zucca.dev/privacy",
+    "termsOfUseUrl": "https://zucca.dev/terms"
+  },
+  "name": {
+    "short": "Zucca Jira Manager",
+    "full": "Zucca Jira Manager for Copilot Cowork"
+  },
+  "description": {
+    "short": "Search, create, manage Jira issues, track sprints, and log time from Cowork",
+    "full": "Full CRUD Jira integration for Copilot Cowork. Manage issues, track sprint progress, and log time — all from natural language prompts. Powered by the Atlassian MCP Server."
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#0052CC",
+  "agentSkills": [
+    { "folder": "./skills/jira-issue-management" },
+    { "folder": "./skills/jira-sprint-reporting" },
+    { "folder": "./skills/jira-time-tracking" }
+  ],
+  "agentConnectors": [
+    {
+      "id": "zucca-jira-mcp",
+      "displayName": "Zucca Jira Connector",
+      "description": "Access Jira Cloud issues, projects, and workflows via the Atlassian MCP Server",
+      "toolSource": {
+        "remoteMcpServer": {
+          "mcpServerUrl": "NGROK_URL_PLACEHOLDER",
+          "authorization": {
+            "type": "None"
+          }
+        }
+      }
+    }
+  ]
+}
