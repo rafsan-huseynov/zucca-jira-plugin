@@ -30,16 +30,20 @@ Unlike the built-in Jira connector in Microsoft 365 Copilot (read-only), this pl
 
 ## Prerequisites
 
-- Microsoft 365 Copilot license with Frontier preview enabled
+- Microsoft 365 Copilot license
+- Access to Copilot Cowork (available through the Frontier preview program)
+- Admin access to Microsoft 365 Admin Center
 - Jira Cloud site (free tier works)
+- Jira API token (free)
 - Python 3.10+
 - ngrok account (free tier)
+- ImageMagick (for creating placeholder icons)
 
 ## Quick Start
 
 ### 1. Clone and configure
 
-    git clone https://github.com/rafhuse/zucca-jira-plugin.git
+    git clone https://github.com/rafsan-huseynov/zucca-jira-plugin.git
     cd zucca-jira-plugin
     cp .env.example .env
 
@@ -73,12 +77,26 @@ Copy the ngrok URL and update `NGROK_URL` in `.env`.
 
     ./build.sh
 
-### 4. Upload
+### 4. Upload the plugin to Microsoft 365
 
-1. Go to https://admin.microsoft.com → Settings → Integrated apps
-2. Upload `zucca-jira-plugin.zip`
-3. Open Cowork → Sources & Skills → toggle on "Zucca Jira Manager"
-4. Start a new conversation and try: "Find all issues in project [your project name]"
+1. Go to **https://admin.microsoft.com**
+2. Navigate to **Agents** in the left sidebar
+3. Click **All agents**
+4. Find the **Export** button area and click the **three dots** (...)
+5. Click **+ Add agent**
+6. Upload your `zucca-jira-plugin.zip` file
+7. Wait for the upload to complete
+
+### 5. Connect the plugin in Copilot Cowork
+
+1. Open **Copilot Cowork** at https://m365.cloud.microsoft
+2. Click the **+** icon
+3. Select **Manage plugins**
+4. Select **Browse plugins**
+5. Find **Zucca Jira Manager** in the list
+6. Click **Connect**
+7. Toggle the plugin **ON**
+8. Start a new conversation and try: "Find all issues in project [your project name]"
 
 ## Example Prompts
 
