@@ -118,9 +118,6 @@ Copy the ngrok URL and update `NGROK_URL` in `.env`.
 - "Show me a pie chart of all issues grouped by status"
 - "Analyze project CSA and give me a dashboard with status breakdown, priority distribution, and workload by assignee. Use charts."
 
-## Skills Format
-
-This plugin uses the [Agent Skills open standard](https://agentskills.org). The same SKILL.md files work in Claude Code, GitHub Copilot, Gemini CLI, Cursor, JetBrains Junie, and 30+ other AI tools.
 
 ## Production Deployment
 
@@ -132,7 +129,7 @@ Update `manifest.json` to use `OAuthPluginVault` for authentication.
 
 ## Video Walkthrough
 
-Full step-by-step video: [YouTube @rafsanhuseynov](https://youtube.com/@rafsanhuseynov)
+Full step-by-step video: https://youtu.be/ZvFaib-oA0M?si=_Fa9gJF34-341Nll
 
 ## Author
 
