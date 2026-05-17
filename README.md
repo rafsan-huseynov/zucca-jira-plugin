@@ -1,8 +1,8 @@
-# Zucca Jira Manager — Copilot Cowork Plugin
+# Copilot Cowork Jira Plugin
 
-A Copilot Cowork plugin that connects to Jira Cloud with full CRUD access. Search, create, update, transition, comment on, and log time against Jira issues — all from natural language prompts inside Cowork.
+A Copilot Cowork plugin that connects to Jira Cloud with full CRUD access. Search, create, update, transition, comment on, and log time against Jira issues from natural language prompts inside Cowork.
 
-Unlike the built-in Jira connector in Microsoft 365 Copilot (read-only), this plugin gives you full read and write access.
+The built in Jira connector in Microsoft 365 Copilot is read only. This plugin gives you full read and write access.
 
 ## What's Inside
 
@@ -43,8 +43,8 @@ Unlike the built-in Jira connector in Microsoft 365 Copilot (read-only), this pl
 
 ### 1. Clone and configure
 
-    git clone https://github.com/rafsan-huseynov/zucca-jira-plugin.git
-    cd zucca-jira-plugin
+    git clone https://github.com/rafsan-huseynov/copilot-cowork-jira-plugin.git
+    cd copilot-cowork-jira-plugin
     cp .env.example .env
 
 Edit `.env` with your values:
@@ -63,17 +63,17 @@ Edit `.env` with your values:
 
 Open three terminal tabs:
 
-**Tab 1 — MCP Server:**
+**Tab 1 (MCP Server):**
 
     ./start.sh
 
-**Tab 2 — ngrok:**
+**Tab 2 (ngrok):**
 
     ngrok http 8000
 
 Copy the ngrok URL and update `NGROK_URL` in `.env`.
 
-**Tab 3 — Build:**
+**Tab 3 (Build):**
 
     ./build.sh
 
@@ -93,7 +93,7 @@ Copy the ngrok URL and update `NGROK_URL` in `.env`.
 2. Click the **+** icon
 3. Select **Manage plugins**
 4. Select **Browse plugins**
-5. Find **Zucca Jira Manager** in the list
+5. Find the plugin in the list
 6. Click **Connect**
 7. Toggle the plugin **ON**
 8. Start a new conversation and try: "Find all issues in project [your project name]"
@@ -118,22 +118,21 @@ Copy the ngrok URL and update `NGROK_URL` in `.env`.
 - "Show me a pie chart of all issues grouped by status"
 - "Analyze project CSA and give me a dashboard with status breakdown, priority distribution, and workload by assignee. Use charts."
 
-
 ## Production Deployment
 
 For production, replace the local MCP server and ngrok with:
-- **Atlassian Rovo MCP Server** (cloud-hosted, OAuth 2.1) or
-- **Azure Container Apps** (self-hosted)
+- **Atlassian Rovo MCP Server** (cloud hosted, OAuth 2.1) or
+- **Azure Container Apps** (self hosted)
 
 Update `manifest.json` to use `OAuthPluginVault` for authentication.
 
 ## Video Walkthrough
 
-Full step-by-step video: https://youtu.be/ZvFaib-oA0M?si=_Fa9gJF34-341Nll
+Full video: https://youtu.be/ZvFaib-oA0M?si=_Fa9gJF34-341Nll
 
 ## Author
 
-**Rafsan Huseynov** — AI Solutions Architect | Microsoft MVP
+**Rafsan Huseynov** | AI Solutions Architect | Microsoft MVP
 - YouTube: [@rafsanhuseynov](https://youtube.com/@rafsanhuseynov)
 - LinkedIn: [rafsanhuseynov](https://linkedin.com/in/rafsanhuseynov)
 
